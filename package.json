@@ -8,13 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.1.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "cypress": "^13.17.0",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -25,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^13.17.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "jsdom": "^25.0.1",
