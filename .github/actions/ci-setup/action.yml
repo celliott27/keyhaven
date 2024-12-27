@@ -3,8 +3,6 @@ description: 'Get code, install pnpm and cache dependencies.'
 runs: 
   using: 'composite'
   steps:
-    - name: Get code
-      uses: actions/checkout@v4
     - name: Install pnpm
       uses: pnpm/action-setup@v4 
     - name: Cache dependencies
