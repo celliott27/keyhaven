@@ -31,16 +31,13 @@ jobs:
       - name: Ci setup
         uses: ./.github/actions/ci-setup
       - run: pnpm run build
-      - name: Debug Build Output
-        run: |
-          pwd
-          ls -la
-          ls -la .next
+      - name: Fix Permissions for .next
+        run: chmod -R 755 .next
       - name: Upload Next.js Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: next-build
-          path: ${{ github.workspace }}/.next
+          path: .next
   cypress-run:
     runs-on: ubuntu-24.04
     needs: build
