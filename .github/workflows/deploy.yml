@@ -31,11 +31,15 @@ jobs:
       - name: Ci setup
         uses: ./.github/actions/ci-setup
       - run: pnpm build
+      - name: Debug Build Output
+        run: |
+          ls -la
+          ls -la .next
       - name: Upload Next.js Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: next-build
-          path: ./next
+          path: .next
   cypress-run:
     runs-on: ubuntu-24.04
     needs: build
