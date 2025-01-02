@@ -7,5 +7,11 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: "./setup.ts",
+    includeSource: ["src/**/*.{ts,tsx}"],
+  },
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
   },
 });
