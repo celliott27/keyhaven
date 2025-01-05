@@ -1,6 +1,6 @@
 import { Nav, NavLink } from "@/components/Nav/Nav";
 
-export default function CustomerLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
