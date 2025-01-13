@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Ci setup
         uses: ./.github/actions/ci-setup
-        run: pnpm lint
+      - run: pnpm lint
   vitest-run:
     runs-on: ubuntu-latest
     steps:
