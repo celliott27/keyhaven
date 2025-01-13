@@ -15,6 +15,5 @@ runs:
         cache: 'pnpm'
         cache-dependency-path: 'pnpm-lock.yaml'
     - name: Install dependencies
-      if: steps.setup-node.outputs.cache-hit != 'true'
       run: pnpm install --frozen-lockfile
       shell: bash 
