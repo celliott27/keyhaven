@@ -21,11 +21,6 @@ jobs:
         run: pnpm add --global vercel@latest
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ needs.call-ci.outputs.artifact_name }} # Use the artifact output
-          path: ./artifact/
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
