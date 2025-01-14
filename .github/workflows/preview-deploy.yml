@@ -24,8 +24,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ needs.call-ci.outputs.artifact_name }} # Use the artifact output
-          path: ./artifact/  
+          name: ${{ needs.call-ci.outputs.artifact_name }} # Use the artifact output 
       - name: Generate Prisma Client
         run: pnpx prisma generate
       - name: Build Project Artifacts
