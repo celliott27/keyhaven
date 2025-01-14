@@ -1,5 +1,5 @@
-name: 'CI Setup'
-description: 'Get code, install pnpm and cache dependencies.'
+name: 'pnpm-node-setup'
+description: 'Install pnpm, setup node with caching, and install dependencies.'
 runs: 
   using: 'composite'
   steps:
